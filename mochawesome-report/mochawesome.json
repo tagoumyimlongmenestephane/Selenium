@@ -1,0 +1,147 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2026-10-06T07:00:27.080Z",
+    "end": "2026-10-06T07:00:29.246Z",
+    "duration": 2166,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fc879054-6ea8-4b5c-8081-71caece0bd0f",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cc64bd19-a3fb-42ba-91f3-7fa06da2e737",
+          "title": "My second test",
+          "fullFile": "/home/developpeur/Documents/Selenium/test/secondTest.js",
+          "file": "/test/secondTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add a todo to this test, it will run",
+              "fullTitle": "My second test should add a todo to this test, it will run",
+              "timedOut": null,
+              "duration": 1966,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// launch the browser\nlet driver = await new Builder().forBrowser(\"chrome\").build();\n// navigate to our application\nawait driver.get(\"https://dummyjson.com/products\");\n// add a todo\nawait driver\n  .findElement(By.id(\"add-todo\"))\n  .sendKeys(\"Learn Selenium\", Key.RETURN);\n//assert\nlet todoText = await driver\n  .findElement(By.xpath(\"//\"))\n  .getText()\n  .then(function (value) {\n    return value;\n  });\n// assert using node assertion\n// assert.strictEqual(todoText, \"Learn Selenium\");\n//assert using chai should\ntodoText.should.equal(\"Learn Selenium\");\n// close the browser\nawait driver.quit();",
+              "err": {
+                "message": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"*[id=\"add-todo\"]\"}\n  (Session info: chrome=151.0.7922.108)",
+                "estack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"*[id=\"add-todo\"]\"}\n  (Session info: chrome=151.0.7922.108)\n    at Object.throwDecodedError (node_modules/selenium-webdriver/lib/error.js:523:15)\n    at parseHttpResponse (node_modules/selenium-webdriver/lib/http.js:527:13)\n    at Executor.execute (node_modules/selenium-webdriver/lib/http.js:459:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async Driver.execute (node_modules/selenium-webdriver/lib/webdriver.js:755:17)\n    at async toWireValue (node_modules/selenium-webdriver/lib/webdriver.js:149:15)\n    at async /home/developpeur/Documents/Selenium/node_modules/selenium-webdriver/lib/webdriver.js:195:16\n    at async forEachKey (node_modules/selenium-webdriver/lib/webdriver.js:189:9)\n    at async convertKeys (node_modules/selenium-webdriver/lib/webdriver.js:194:3)\n    at async Driver.execute (node_modules/selenium-webdriver/lib/webdriver.js:753:22)",
+                "diff": null
+              },
+              "uuid": "b4b1682e-5037-4813-9763-da38b3da57d1",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b4b1682e-5037-4813-9763-da38b3da57d1"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1966,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "cc9781f6-16b8-40e8-a4e2-10f216413808",
+          "title": "My first test",
+          "fullFile": "/home/developpeur/Documents/Selenium/test/firstTest.js",
+          "file": "/test/firstTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add a todo",
+              "fullTitle": "My first test should add a todo",
+              "timedOut": null,
+              "duration": 1968,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// launch the browser\nlet driver = await new Builder().forBrowser(\"chrome\").build();\n// navigate to our application\nawait driver.get(\"https://dummyjson.com/products\");\n// add a todo\nawait driver\n  .findElement(By.id(\"add-todo\"))\n  .sendKeys(\"Learn Selenium\", Key.RETURN);\n//assert\nlet todoText = await driver\n  .findElement(By.xpath(\"//\"))\n  .getText()\n  .then(function (value) {\n    return value;\n  });\n// assert using node assertion\n// assert.strictEqual(todoText, \"Learn Selenium\");\n//assert using chai should\ntodoText.should.equal(\"Learn Selenium\");\n// close the browser\nawait driver.quit();",
+              "err": {
+                "message": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"*[id=\"add-todo\"]\"}\n  (Session info: chrome=151.0.7922.108)",
+                "estack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"*[id=\"add-todo\"]\"}\n  (Session info: chrome=151.0.7922.108)\n    at Object.throwDecodedError (node_modules/selenium-webdriver/lib/error.js:523:15)\n    at parseHttpResponse (node_modules/selenium-webdriver/lib/http.js:527:13)\n    at Executor.execute (node_modules/selenium-webdriver/lib/http.js:459:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async Driver.execute (node_modules/selenium-webdriver/lib/webdriver.js:755:17)\n    at async toWireValue (node_modules/selenium-webdriver/lib/webdriver.js:149:15)\n    at async /home/developpeur/Documents/Selenium/node_modules/selenium-webdriver/lib/webdriver.js:195:16\n    at async forEachKey (node_modules/selenium-webdriver/lib/webdriver.js:189:9)\n    at async convertKeys (node_modules/selenium-webdriver/lib/webdriver.js:194:3)\n    at async Driver.execute (node_modules/selenium-webdriver/lib/webdriver.js:753:22)",
+                "diff": null
+              },
+              "uuid": "9bbc2d86-c7d3-4f87-ada6-f8fc6938ba33",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9bbc2d86-c7d3-4f87-ada6-f8fc6938ba33"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1968,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "12.0.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.3.2"
+    }
+  }
+}
