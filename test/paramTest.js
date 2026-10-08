@@ -32,12 +32,21 @@ describe("My second test", function () {
       await driver.quit();
   });
 
+  var browsers = [
+      {browserName: "chrome", version: "latest", platform: "Windows 10"},
+      {browserName: "firefox", version: "latest", platform: "Windows 10"},
+      {browserName: "MicrosoftEdge", version: "latest", platform: "Windows 10"}
+  ]
 
-
-  // it bloc
+  browsers.forEach(({browserName, version, platform}) =>{
+     // it bloc
   it("should add a todo to this test, it will run", async function () {
     // launch the browser
     // let driver = await new Builder().forBrowser("chrome").build();
+    
+    Itcapabilitis.capabilities.platformName = platform;
+    Itcapabilitis.capabilities.browserVersion = version;
+    Itcapabilitis.capabilities.browserName = browserName;
 
     // navigate to our application
     await driver.get("https://dummyjson.com/products");
@@ -52,7 +61,7 @@ describe("My second test", function () {
       .findElement(By.xpath("//"))
       .getText()
       .then(function (value) {
-        return value;
+        return value; 
       });
 
     // assert using node assertion
@@ -62,8 +71,10 @@ describe("My second test", function () {
     todoText.should.equal("Learn Selenium");
 
     // close the browser
-    // await driver.quit();
+    await driver.quit();
   });
+  });
+
 });
 
 
